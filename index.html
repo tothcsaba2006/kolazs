@@ -1,32 +1,92 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Kép+link</title>
-</head>
 <body>
-  <nav>
-    <a href=" https://tothcsaba2006.github.io/kollazs/index.html" style="background-color: rgb(152, 253, 152); text-decoration: none;">HOME</a>|
-    <a href=" https://tothcsaba2006.github.io/kollazs/keplink.html" style="background-color: rgb(204, 199, 134); text-decoration: none;">1.feladat</a>|
-    <a href=" https://tothcsaba2006.github.io/kollazs/listak.html" style="background-color: rgb(190, 80, 80); text-decoration: none;">2.feladat</a>|
-    <a href=" https://tothcsaba2006.github.io/kollazs/orarend.html" style="background-color: rgb(47, 124, 168); text-decoration: none;">3.feladat</a>
-      </nav>
-<h1 style="color: lime;" >Tóth Csaba</h1>
-<h2 style="color: red;">Tóth Csaba</h2>
-<h3 style="color: blue;" >Tóth Csaba</h3>
-<h4 style="color: orange;">Tóth Csaba</h4>
-<h5 style="color: yellow;">Tóth Csaba</h5>
-<h6 style="color: brown;">Tóth Csaba</h6>  
+  <style>
+    body {
+      margin: 0;
+      font-family: "Lato", sans-serif;
+    }
+    
+    .sidebar {
+      margin: 0;
+      padding: 0;
+      width: 200px;
+      background-color: #f1f1f1;
+      position: fixed;
+      height: 100%;
+      overflow: auto;
+    }
+    
+    .sidebar a {
+      display: block;
+      color: black;
+      padding: 16px;
+      text-decoration: none;
+    }
+     
+    .sidebar a.active {
+      background-color: #04AA6D;
+      color: white;
+    }
+    
+    .sidebar a:hover:not(.active) {
+      background-color: #555;
+      color: white;
+    }
+    
+    div.content {
+      margin-left: 200px;
+      padding: 1px 16px;
+      height: 1000px;
+    }
+    
+    @media screen and (max-width: 700px) {
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+      .sidebar a {float: left;}
+      div.content {margin-left: 0;}
+    }
+    
+    @media screen and (max-width: 400px) {
+      .sidebar a {
+        text-align: center;
+        float: none;
+      }
+    }
+    </style>
+    </head>
+    <body>
+    
+    <div class="sidebar">
+      <a class="active href="index.html">Főoldal</a>
+      <a href="keplink.html">1. feladat</a>
+      <a href="listak.html">2. feladat</a>
+      <a href="orarend.html">3. feladat </a>
+    </div>
+    
+    <div class="content">
+ 
+<h1 style="color: blueviolet;">TóthCsaba</h1>
+  <h2 style="color: tomato;">TóthCsaba</h2>
+  <h3 style="color: rgb(194, 197, 18);">TóthCsaba</h3>
+  <h4 style="color: rgb(192, 51, 173);">TóthCsaba</h4>
+  <h5 style="color: rgb(8, 104, 88);">TóthCsaba</h5>
+  <h6 style="color: rgb(206, 11, 11);">TóthCsaba</h6>
 
- <p>
-   1. feladat <a href="https://tothcsaba2006.github.io/kollazs/keplink.html" target="_blank">KÉPLINK</a>
-  </p> 
-  <p>
-   2. feladat <a href="https://tothcsaba2006.github.io/kollazs/listak.html" target="_blank">LISTÁK</a>
-  </p> 
-  <p>
-   3. feladat <a href="https://tothcsaba2006.github.io/kollazs/orarend.html" target="_blank">ÓRAREND</a>
-  </p> 
-<p style="color: rgb(92, 10, 168);" >Kollázs Képem:</p>
-<img src="https://github.com/tothcsaba2006/kollazs/blob/main/collage.jpg?raw=true"alt="collage"width="500">
+  <a href"https://github.com/tothcsaba2006/kollazs/blob/main/keplink.html" target="blank">KEPLINK</a>
+  <p> Itt látható a kollázsképem:</p>
+<img src="https://raw.githubusercontent.com/tothcsaba2006/kollazs/main/collage.jpg" alt="Trulli" width=700>
+<p>
+  1. feladat: <a href="https://github.com/tothcsaba2006/kollazs/blob/main/keplink.html" target="blank">KEPLINK</a>
+</p>
+<p>
+ 2. feladat: <a href="https://github.com/tothcsaba2006/kollazs/blob/main/listak.html" target="blank">LISTÁK</a>
+</p>
+<p>
+ 3. feladat:<a href="https://github.com/tothcsaba2006/kollazs/blob/main/orarend.html" target="blank">ÓRAREND</a>
+ </p>
 </body>
 </html>
