@@ -3,31 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>listak</title>
+    <title>Listák</title>
 </head>
 <body>
-    <nav>
-        <a href=" https://tothcsaba2006.github.io/kollazs/index.html" style="background-color: rgb(152, 253, 152); text-decoration: none;">HOME</a>|
-        <a href=" https://tothcsaba2006.github.io/kollazs/keplink.html" style="background-color: rgb(204, 199, 134); text-decoration: none;">1.feladat</a>|
-        <a href=" https://tothcsaba2006.github.io/kollazs/listak.html" style="background-color: rgb(190, 80, 80); text-decoration: none;">2.feladat</a>|
-        <a href=" https://tothcsaba2006.github.io/kollazs/orarend.html" style="background-color: rgb(47, 124, 168); text-decoration: none;">3.feladat</a>
-          </nav>
-<h1>Tóth Csaba</h1>
-<h2>listák</h2>
-
-<p style="color: darkgreen;">kedvenc tantárgyaim</p>
-<ol>
-<li style="color: gold;">programozási alapok</li>
-<li style="color: silver;">informatika és távközlés</li>
-<li style="color: brown;">tesnevelés</li>
-</ol>
-
-<p style="color: darkgreen;">kedvenc szabad idős programom</p>
-<ul>
-<li style="color: blue;">gépen játszás</li>
-<li style="color: blue;">kosarazás</li>
-<li style="color: blue;">foci</li>
-</ul>
-
+    <style>
+        body {
+          margin: 0;
+          font-family: "Lato", sans-serif;
+        }
+        
+        .sidebar {
+          margin: 0;
+          padding: 0;
+          width: 200px;
+          background-color: #f1f1f1;
+          position: fixed;
+          height: 100%;
+          overflow: auto;
+        }
+        
+        .sidebar a {
+          display: block;
+          color: black;
+          padding: 16px;
+          text-decoration: none;
+        }
+         
+        .sidebar a.active {
+          background-color: #04AA6D;
+          color: white;
+        }
+        
+        .sidebar a:hover:not(.active) {
+          background-color: #555;
+          color: white;
+        }
+        
+        div.content {
+          margin-left: 200px;
+          padding: 1px 16px;
+          height: 1000px;
+        }
+        
+        @media screen and (max-width: 700px) {
+          .sidebar {
+            width: 100%;
+            height: auto;
+            position: relative;
+          }
+          .sidebar a {float: left;}
+          div.content {margin-left: 0;}
+        }
+        
+        @media screen and (max-width: 400px) {
+          .sidebar a {
+            text-align: center;
+            float: none;
+          }
+        }
+        </style>
+        </head>
+        <body>
+        
+        <div class="sidebar">
+          <a href="index.html">Főoldal</a>
+          <a href="keplink.html">1. feladat</a>
+          <a class="active" href="listak.html">2. feladat</a>
+          <a href="orarend.html">3. feladat </a>
+        </div>
+        
+        <div class="content">
+            <h1>Tóth Csaba</h1>
+            <h2>listák</h2>
+            
+            <p style="color: darkgreen;">kedvenc tantárgyaim</p>
+            <ol>
+            <li style="color: gold;">programozási alapok</li>
+            <li style="color: silver;">informatika és távközlés</li>
+            <li style="color: brown;">tesnevelés</li>
+            </ol>
+            
+            <p style="color: darkgreen;">kedvenc szabad idős programom</p>
+            <ul>
+            <li style="color: blue;">gépen játszás</li>
+            <li style="color: blue;">kosarazás</li>
+            <li style="color: blue;">foci</li>
+            </ul>
 </body>
 </html>
+
