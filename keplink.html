@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Képlink</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Képlink</title>
 
 </head>
+
 <body>
   <style>
     body {
       margin: 0;
       font-family: "Lato", sans-serif;
     }
-    
+
     .sidebar {
       margin: 0;
       padding: 0;
@@ -22,63 +24,72 @@
       height: 100%;
       overflow: auto;
     }
-    
+
     .sidebar a {
       display: block;
       color: black;
       padding: 16px;
       text-decoration: none;
     }
-     
+
     .sidebar a.active {
       background-color: #04AA6D;
       color: white;
     }
-    
+
     .sidebar a:hover:not(.active) {
       background-color: #555;
       color: white;
     }
-    
+
     div.content {
       margin-left: 200px;
       padding: 1px 16px;
       height: 1000px;
     }
-    
+
     @media screen and (max-width: 700px) {
       .sidebar {
         width: 100%;
         height: auto;
         position: relative;
       }
-      .sidebar a {float: left;}
-      div.content {margin-left: 0;}
+
+      .sidebar a {
+        float: left;
+      }
+
+      div.content {
+        margin-left: 0;
+      }
     }
-    
+
     @media screen and (max-width: 400px) {
       .sidebar a {
         text-align: center;
         float: none;
       }
     }
-    </style>
-    </head>
-    <body>
-    
+  </style>
+  </head>
+
+  <body>
+
     <div class="sidebar">
       <a href="index.html">Főoldal</a>
       <a class="active" href="keplink.html">1. feladat</a>
       <a href="listak.html">2. feladat</a>
       <a href="orarend.html">3. feladat </a>
     </div>
-    
+
     <div class="content">
-   
-        <h1>Tóth csaba</h1>
-        <h2>kép+link</h2>
+
+      <h1>Tóth csaba</h1>
+      <h2>kép+link</h2>
       <a href="https://www.ubisoft.com/en-us/">
-      <img src="https://image.api.playstation.com/vulcan/img/rnd/202103/1519/1qiQsqTGnDhQ1vK4xW8Ds6Zb.png?w=440" alt="játék" title="rainbow six siege">
+        <img src="https://image.api.playstation.com/vulcan/img/rnd/202103/1519/1qiQsqTGnDhQ1vK4xW8Ds6Zb.png?w=440"
+          alt="játék" title="rainbow six siege" widht=100%>
       </a>
-</body>
+  </body>
+
 </html>
