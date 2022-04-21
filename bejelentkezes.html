@@ -69,7 +69,12 @@ font-family: 'Roboto Mono', monospace;">
     }
   </style>
   </head>
-
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>urlap</title>
+</head>
   <body>
 
     <div class="sidebar">
@@ -82,7 +87,33 @@ font-family: 'Roboto Mono', monospace;">
     </div>
                                                  
     <div class="content">
-    <p>ide
-    footer,favicon</p>
+    <!DOCTYPE html>
+<html lang="hu">
+    <fieldset id="szin" style="width: fit-content; background-color:brown;">
+        <legend style="font-size: 200%;">regisztráció</legend>
+        <input id="szi2" type="text" id="név" required placeholder="név"><br>
+        <input id="szi3" type="password" id="jelszó" required placeholder="jelszó"><br>
+        <input id="szi3" type="password" id="jelszó2" required placeholder="jelszó2"><br>
+        <button id="szi4" onclick="belep(név.value,jelszó.value)">OK</button>
+    </fieldset>
+    <button onclick="document.getElementById('szin').style.backgroundColor = 'blue'">kek</button>
+    <script>
+        function belep(username, password, password) {
+
+            localStorage.setItem(username, password, password)
+
+            if (password == "1234") { alert("sikeres regisztráció") }
+            else {
+
+            if (password == "1234") { alert("sikeres regisztráció") }
+            else {
+                if (username == "csaba") { alert("sikeres regisztráció") }
+                else { alert("üdv") }
+            }
+        }
+    }
+    </script>
+</body>
+</html>
                         
                         
