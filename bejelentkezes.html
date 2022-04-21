@@ -1,1 +1,84 @@
-ide
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Neonderthaw&family=Roboto+Mono:wght@100&display=swap');
+</style>
+<!DOCTYPE html>
+<html>
+
+<body style="font-family: 'Neonderthaw', cursive;
+font-family: 'Roboto Mono', monospace;">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Lato", sans-serif;
+    }
+
+    .sidebar {
+      margin: 0;
+      padding: 0;
+      width: 200px;
+      background-color: #f1f1f1;
+      position: fixed;
+      height: 100%;
+      overflow: auto;
+    }
+
+    .sidebar a {
+      display: block;
+      color: black;
+      padding: 16px;
+      text-decoration: none;
+    }
+
+    .sidebar a.active {
+      background-color: #04AA6D;
+      color: blue;
+    }
+
+    .sidebar a:hover:not(.active) {
+      background-color: #555;
+      color: red;
+    }
+
+    div.content {
+      margin-left: 200px;
+      padding: 1px 16px;
+      height: 1000px;
+    }
+
+    @media screen and (max-width: 700px) {
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+
+      .sidebar a {
+        float: left;
+      }
+
+      div.content {
+        margin-left: 0;
+      }
+    }
+
+    @media screen and (max-width: 400px) {
+      .sidebar a {
+        text-align: center;
+        float: none;
+      }
+    }
+  </style>
+  </head>
+
+  <body>
+
+    <div class="sidebar">
+      <a href="index.html">kolazs</a>
+      <a href="keplink.html">kep+link</a>
+      <a href="listak.html">listak</a>
+      <a href="orarend.html">orarend</a>
+      <a href="urlap.html">urlap</a>
+      <a class="active href=" bejelentkezes.html">bejelentkezes</a>
+    </div>
+
+    <div class="content">
