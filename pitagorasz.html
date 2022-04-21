@@ -1,1 +1,38 @@
-ide
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>pitagorász</h1>
+<input type="number"><br>
+<input type="number"><br>
+<button onclick="osszeg()">Összeg</button>
+
+<script>
+
+    var x = 1
+    var y = 1
+
+    function xin() {
+        x = Number(prompt("Add meg X értékét: "))
+    }
+
+
+    function yin() {
+        y = Number(prompt("Add meg Y értékét: "))
+    }
+
+
+    function osszeg() {
+        document.write(" X+Y= ")
+        document.write(x+y)
+    }
+
+</script>
+
+</body>
+</html>
