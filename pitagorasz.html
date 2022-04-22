@@ -1,130 +1,118 @@
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Neonderthaw&family=Roboto+Mono:wght@100&display=swap');
-</style>
-<!DOCTYPE html>
-<html>
-
-<body style="font-family: 'Neonderthaw', cursive;
-font-family: 'Roboto Mono', monospace;">
-  <style>
-    body {
-      margin: 0;
-      font-family: "Lato", sans-serif;
-    }
-
-    .sidebar {
-      margin: 0;
-      padding: 0;
-      width: 200px;
-      background-color: #f1f1f1;
-      position: fixed;
-      height: 100%;
-      overflow: auto;
-    }
-
-    .sidebar a {
-      display: block;
-      color: black;
-      padding: 16px;
-      text-decoration: none;
-    }
-
-    .sidebar a.active {
-      background-color: #04AA6D;
-      color: blue;
-    }
-
-    .sidebar a:hover:not(.active) {
-      background-color: #555;
-      color: red;
-    }
-
-    div.content {
-      margin-left: 200px;
-      padding: 1px 16px;
-      height: 1000px;
-    }
-
-    @media screen and (max-width: 700px) {
-      .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-      }
-
-      .sidebar a {
-        float: left;
-      }
-
-      div.content {
-        margin-left: 0;
-      }
-    }
-
-    @media screen and (max-width: 400px) {
-      .sidebar a {
-        text-align: center;
-        float: none;
-      }
-    }
-  </style>
-  </head>
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>urlap</title>
-</head>
-  <body>
-
-    <div class="sidebar">
-      <a href="index.html">kolazs</a>
-      <a href="keplink.html">kep+link</a>
-      <a href="listak.html">listak</a>
-      <a href="orarend.html">orarend</a>
-      <a href="urlap.html">urlap</a>
-      <a href="bejelentkezes.html">bejelentkezes</a>
-      <a class="active href="pitagorasz.html">pitagorasz</a>
-      <a href="szamologep.html">számologép</a>
-      <a href="tablazatweboldalas.html">tablazat</a>
-    </div>
-                                                 
-    <div class="content">
-<!DOCTYPE html>
+    @import url('https://fonts.googleapis.com/css2?family=Neonderthaw&family=Roboto+Mono:wght@100&display=swap');
+    </style>
+    <!DOCTYPE html>
+    <html>
+    
+    <body style="font-family: 'Neonderthaw', cursive;
+    font-family: 'Roboto Mono', monospace;">
+      <style>
+        body {
+          margin: 0;
+          font-family: "Lato", sans-serif;
+        }
+    
+        .sidebar {
+          margin: 0;
+          padding: 0;
+          width: 200px;
+          background-color: #f1f1f1;
+          position: fixed;
+          height: 100%;
+          overflow: auto;
+        }
+    
+        .sidebar a {
+          display: block;
+          color: black;
+          padding: 16px;
+          text-decoration: none;
+        }
+    
+        .sidebar a.active {
+          background-color: #04AA6D;
+          color: blue;
+        }
+    
+        .sidebar a:hover:not(.active) {
+          background-color: #555;
+          color: red;
+        }
+    
+        div.content {
+          margin-left: 200px;
+          padding: 1px 16px;
+          height: 1000px;
+        }
+    
+        @media screen and (max-width: 700px) {
+          .sidebar {
+            width: 100%;
+            height: auto;
+            position: relative;
+          }
+    
+          .sidebar a {
+            float: left;
+          }
+    
+          div.content {
+            margin-left: 0;
+          }
+        }
+    
+        @media screen and (max-width: 400px) {
+          .sidebar a {
+            text-align: center;
+            float: none;
+          }
+        }
+      </style>
+      </head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>urlap</title>
+    </head>
+      <body>
+    
+        <div class="sidebar">
+          <a href="index.html">kolazs</a>
+          <a href="keplink.html">kep+link</a>
+          <a href="listak.html">listak</a>
+          <a href="orarend.html">orarend</a>
+          <a href="urlap.html">urlap</a>
+          <a href="bejelentkezes.html">bejelentkezes</a>
+          <a class="active href="pitagorasz.html">pitagorasz</a>
+          <a href="szamologep.html">számologép</a>
+          <a href="tablazatweboldalas.html">tablazat</a>
+        </div>
+        <!DOCTYPE html>
 <html lang="hu">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<title>Pitagorasz</title>
 </head>
 <body>
-<h1>pitagorász</h1>
-<input type="number"><br>
-<input type="number"><br>
-<button onclick="osszeg()">Összeg</button>
 
-<script>
-
-    var x = 1
-    var y = 1
-
-    function xin() {
-        x = Number(prompt("Add meg X értékét: "))
-    }
+    <div class="content">
+        <input type="number" name="a" id="var_a" placeholder="a értéke"><br>
+    <input type="number" name="b" id="var_b" placeholder="b értéke"><br><br>
+    <button onclick="pita(var_a.value, var_b.value)">c értéke = </button>
+    <p style="border: 1px solid black; width: 145px; height: 20px; border-radius: 3px;" id="eredmeny"></p>
+    </div>
 
 
-    function yin() {
-        y = Number(prompt("Add meg Y értékét: "))
-    }
 
-
-    function osszeg() {
-        document.write(" X+Y= ")
-        document.write(x+y)
-    }
-
-</script>
+    <script>
+        function pita(a, b) {
+            document.getElementById('eredmeny').innerHTML = Math.sqrt(a * a + b * b)
+        }
+    </script>
 
 </body>
+
 </html>
+    </body>
+    </html>
