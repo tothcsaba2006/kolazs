@@ -3,3 +3,79 @@ ezeket kell át nézni
 -bejelentkezes.html
 -szamologep.html
 -pitagorasz.html
+tablazat
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tablazatel</title>
+</head>
+<body>
+    <table border="1px">
+        <tr>
+            <td>Xiaomi Mi Desktop Monitor</td>
+            <td>Mi Curved Gaming Monitor</td>
+            <td>Dell P2419H LED monitor</td>
+            <td>Monitor!</td>
+        </tr>
+        <tr>
+            <td><img src="https://xiaomi-store.hu/14166-large_default/xiaomi-mi-desktop-monitor-27-.jpg" alt="50px"></td>
+            <td><img src="https://traderheavens.com/images/product/hu/2751/mi-curved-gaming-monitor-34quot_0.jpg" alt="50px"></td>
+            <td><img src="https://s13emagst.akamaized.net/products/16219/16218259/images/res_f84a6c0ddd5edf73ec6a1b875f5e8aa7.jpg" alt="50px"></td>
+            <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Monitor_LCD.jpg/1200px-Monitor_LCD.jpg" alt="50px"></td>
+        </tr>
+        <tr>
+            <td>A 23.8 colos (60,5 cm), Full HD felbontású képernyő 178 fokos betekintési szöget tesz lehetővé. A meglehetősen vékony kávákkal rendelkező monitornál a jobb alsó részre rejtették a vezérlőgombokat, így az egyszerű, letisztult megjelenést biztosít. A hengeres tartó lehetőséget kínál a panel mozgatásához, megfelelő beállításához. A Xiaomi minimalista kialakításának folytatásaként a monitor hátlapja letisztult és egyszerű, csupán a márkajelzés és a HDMI port, valamint az áramellátási port kapott itt helyet. A monitor csupán 24W-ot fogyaszt, ami az új szabvány szintű energiahatékonysági érték. A Mi Desktop Monitor 1C alacsony kékfény kibocsátásának révén akkor is védi a szemedet a kékfény káros sugaraitól, ha egész nap előtte kell ülnöd.</td>
+            <td>Kijelző méret: 34.0 " Képernyőfelbontás: 3440 x 1440 pixel Kijelző fényerő: 300 cd/m2 Válaszidő: 4 ms HD típus: Wide Quad HD Képernyő formája: Hajlított Képernyő görbülete: 1500R Támogatott grafikus felbontás: 3440 x 1440 Kontrasztarány: 3000:1 Max. frissítési sebesség: 144 Hz Vízszintes látószög: 178 ° Függőleges látószög: 178 ° Panel típus: VA Kijelző képarány: 21:9 Színárnyalatok: 16.78 million colours Színskála: 85 % sRGB lefedettség: 121 %</td>
+            <td> A három oldalon is ultravékony kerettel rendelkező kivitelnek köszönhetően több monitoron is zökkenőmentesen tekintheti meg tartalmait. A kétmonitoros konfigurációval pedig akár 18%-kal növelheti termelékenységét2. További lehetőségek a többfeladatos munkavégzésre: Kényelmesen dolgozhat több képernyőn, a Dell Display Manager szoftver Easy Arrange funkciójával pedig előre megadott sablonok közül választhat. Gyorsan elrendezheti alkalmazásait mozaikszerű felbontásban, és visszatérhet munkájához az automatikus visszaállítás funkcióval, amely megjegyzi, hogy hol hagyta azt félbe. Konzisztens és élethű színek: A képsíkváltó (IPS) technológia által biztosított széles betekintési szögnek köszönhetően élénk színeket láthat, bárhonnan is nézi a képernyőt.</td>
+            <td>ez egy jo minitor!</td>
+        </tr>
+    </table>
+</body>
+</html>
+kosssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssar
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kosar</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <button onclick="kosarba('termek1')" style="width: 200px; height: 200px;">termék1</button>
+    <button onclick="kosarba('termek2')" style="width: 200px; height: 200px;">termék2</button>
+    <button onclick="kosarba('termek3')" style="width: 200px; height: 200px;">termék3</button>
+    <br><br>
+    <button onclick="torles()">törlés</button>
+    <button onclick="kosar()">kosár</button>
+    <br><br>
+    <table border="2px" id="lista"></table>
+</body>
+</html>
+java.kosar
+var termek1 = 10000
+var termek2 = 15000
+var termek3 = 5000
+
+function kosarba(termek) {
+db=Number(prompt("add meg menyit szeretnél:"))
+    localStorage.setItem(termek,db)
+}
+function torles(){
+    localStorage.clear()
+}
+function kosar(){
+    var lista = "<tr> <th> név: </th> <th> darab: </th> <th> ár: </th> </tr>"
+aru = localStorage.key(0)
+darab = localStorage.getItem(localStorage.key(0))
+ar = localStorage.key(0)
+
+    lista += "<tr> <th> " + aru + " </th> <th> " + darab + " </th> <th> " + ar + "ft </th> </tr>"
+
+
+    document.getElementById('lista').innerHTML= lista
+}
