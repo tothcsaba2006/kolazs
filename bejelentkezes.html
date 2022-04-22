@@ -1,128 +1,98 @@
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Neonderthaw&family=Roboto+Mono:wght@100&display=swap');
-    </style>
-    <!DOCTYPE html>
-    <html>
-    
-    <body style="font-family: 'Neonderthaw', cursive;
-    font-family: 'Roboto Mono', monospace;">
-      <style>
-        body {
-          margin: 0;
-          font-family: "Lato", sans-serif;
-        }
-    
+  @import url('https://fonts.googleapis.com/css2?family=Neonderthaw&family=Roboto+Mono:wght@100&display=swap');
+  </style>
+  <!DOCTYPE html>
+  <html>
+  
+  <body style="font-family: 'Neonderthaw', cursive;
+  font-family: 'Roboto Mono', monospace;">
+    <style>
+      body {
+        margin: 0;
+        font-family: "Lato", sans-serif;
+      }
+  
+      .sidebar {
+        margin: 0;
+        padding: 0;
+        width: 200px;
+        background-color: #f1f1f1;
+        position: fixed;
+        height: 100%;
+        overflow: auto;
+      }
+  
+      .sidebar a {
+        display: block;
+        color: black;
+        padding: 16px;
+        text-decoration: none;
+      }
+  
+      .sidebar a.active {
+        background-color: #04AA6D;
+        color: blue;
+      }
+  
+      .sidebar a:hover:not(.active) {
+        background-color: #555;
+        color: red;
+      }
+  
+      div.content {
+        margin-left: 200px;
+        padding: 1px 16px;
+        height: 1000px;
+      }
+  
+      @media screen and (max-width: 700px) {
         .sidebar {
-          margin: 0;
-          padding: 0;
-          width: 200px;
-          background-color: #f1f1f1;
-          position: fixed;
-          height: 100%;
-          overflow: auto;
+          width: 100%;
+          height: auto;
+          position: relative;
         }
-    
+  
         .sidebar a {
-          display: block;
-          color: black;
-          padding: 16px;
-          text-decoration: none;
+          float: left;
         }
-    
-        .sidebar a.active {
-          background-color: #04AA6D;
-          color: blue;
-        }
-    
-        .sidebar a:hover:not(.active) {
-          background-color: #555;
-          color: red;
-        }
-    
+  
         div.content {
-          margin-left: 200px;
-          padding: 1px 16px;
-          height: 1000px;
+          margin-left: 0;
         }
-    
-        @media screen and (max-width: 700px) {
-          .sidebar {
-            width: 100%;
-            height: auto;
-            position: relative;
-          }
-    
-          .sidebar a {
-            float: left;
-          }
-    
-          div.content {
-            margin-left: 0;
-          }
+      }
+  
+      @media screen and (max-width: 400px) {
+        .sidebar a {
+          text-align: center;
+          float: none;
         }
-    
-        @media screen and (max-width: 400px) {
-          .sidebar a {
-            text-align: center;
-            float: none;
-          }
-        }
-      </style>
-      </head>
-    
-      <body>
-    
-        <div class="sidebar">
-          <a href=" index.html">kolazs</a>
-          <a href="keplink.html">kep+link</a>
-          <a href="listak.html">listak</a>
-          <a href="orarend.html">orarend</a>
-          <a href="urlap.html">urlap</a>
-          <a class="active href="bejelentkezes.html">bejelentkezés</a>
-          <a href="pitagorasz.html">pitagorasz</a>
-          <a href="szamologep.html">számologép</a>
-          <a href="tablazatweboldalas.html">tablazat</a>
-        </div>
-    
-        <div class="content">
-            <!DOCTYPE html>
-            <html lang="hu">
-            
-            <head>
-                <meta charset="UTF-8">
-                <title>Számológép</title>
-            </head>
-            <body>
-                <fieldset style="width: fit-content;">
-                    <form action="javascript:void(0);">
-                        <input class="inp" type="number" name="nbr" id="x_ert" placeholder="addmeg a(z) x értéket" required><br>
-                        <input class="inp" type="number" name="nbr" id="y_ert" placeholder="addmeg a(z) y értéket" required><br>
-            
-                        <input class="but" type="button" value="Összeadás" onclick="osszead()"> <input type="text" id="ossz" readonly><br>
-                        <input class="but" type="button" value="Kivonás" onclick="kivon()"> <input type="text" id="kiv" readonly> <br>
-                        <input class="but" type="button" value="Szorzás" onclick="szorz()"> <input type="text" id="szor" readonly> <br>
-                        <input class="but" type="button" value="Osztás" onclick="oszt()"> <input type="text" id="osztas" readonly> <br>
-                        <input class="but" type="submit" name="sub" id="subm" value="ösz kiszámit" onclick="osszead();kivon();szorz();oszt()">
-                    </form>
-                </fieldset>
-            </div>
-                <script>
-                    function osszead() {
-                        ossz.value = (Number(x_ert.value) + Number(y_ert.value))
-                    }
-            
-                    function kivon(x, y) {
-                        kiv.value = (Number(x_ert.value) - Number(y_ert.value))
-                    }
-            
-                    function szorz(x, y) {
-                        szor.value = (Number(x_ert.value) * Number(y_ert.value)).toFixed(2)
-                    }
-            
-                    function oszt(x, y) {
-                        osztas.value = (Number(x_ert.value) / Number(y_ert.value)).toFixed(2)
-                    }
-                </script>
-                <footer>
-            </body>
-            </html>
+      }
+    </style>
+    </head>
+  
+    <body>
+  
+      <div class="sidebar">
+        <a href=" index.html">kolazs</a>
+        <a href="keplink.html">kep+link</a>
+        <a href="listak.html">listak</a>
+        <a href="orarend.html">orarend</a>
+        <a href="urlap.html">urlap</a>
+        <a class="active href="bejelentkezes.html">bejelentkezés</a>
+        <a href="pitagorasz.html">pitagorasz</a>
+        <a href="szamologep.html">számologép</a>
+        <a href="tablazatweboldalas.html">tablazat</a>
+      </div>
+  
+      <div class="content">
+        <fieldset style="width: fit-content;">
+        
+        <form action="">
+          <input class="oszlop" style="margin-top: 20px;" type="text" id="" placeholder="név"><br>
+          <input class="oszlop" type="email" id="" placeholder="email cím"><br>
+          <input class="oszlop" type="password" name="" id="" placeholder="jelszó"><br>
+          <input type="submit" value="regisztráció" onclick="reg()"><br>
+        </fieldset>
+      </form>
+  </body>
+  </html>
