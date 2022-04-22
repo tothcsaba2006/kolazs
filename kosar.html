@@ -1,97 +1,130 @@
 <head>
-<link rel="icon" href="favicon.jpg.png" type="image/x-icon">
-</head>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Neonderthaw&family=Roboto+Mono:wght@100&display=swap');
-</style>
-<!DOCTYPE html>
-<html>
+    <link rel="icon" href="favicon.jpg.png" type="image/x-icon">
+    </head>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Neonderthaw&family=Roboto+Mono:wght@100&display=swap');
+    </style>
+    <!DOCTYPE html>
+    <html>
+    
+    <body style="font-family: 'Neonderthaw', cursive;
+    font-family: 'Roboto Mono', monospace;">
+      <style>
+        body {
+          margin: 0;
+          font-family: "Lato", sans-serif;
+        }
+    
+        .sidebar {
+          margin: 0;
+          padding: 0;
+          width: 200px;
+          background-color: #f1f1f1;
+          position: fixed;
+          height: 100%;
+          overflow: auto;
+        }
+    
+        .sidebar a {
+          display: block;
+          color: black;
+          padding: 16px;
+          text-decoration: none;
+        }
+    
+        .sidebar a.active {
+          background-color: #04AA6D;
+          color: blue;
+        }
+    
+        .sidebar a:hover:not(.active) {
+          background-color: #555;
+          color: red;
+        }
+    
+        div.content {
+          margin-left: 200px;
+          padding: 1px 16px;
+          height: 1000px;
+        }
+    
+        @media screen and (max-width: 700px) {
+          .sidebar {
+            width: 100%;
+            height: auto;
+            position: relative;
+          }
+    
+          .sidebar a {
+            float: left;
+          }
+    
+          div.content {
+            margin-left: 0;
+          }
+        }
+    
+        @media screen and (max-width: 400px) {
+          .sidebar a {
+            text-align: center;
+            float: none;
+          }
+        }
+      </style>
+      </head>
+    
+      <body>
+    
+        <div class="sidebar">
+          <a href=" index.html">kolazs</a>
+          <a href="keplink.html">kep+link</a>
+          <a href="listak.html">listak</a>
+          <a href="orarend.html">orarend</a>
+          <a href="urlap.html">urlap</a>
+          <a href="bejelentkezes.html">bejelentkezés</a>
+          <a href="pitagorasz.html">pitagorasz</a>
+          <a href="szamologep.html">számologép</a>
+          <a href="tablazatweboldalas.html">tablazat</a>
+          <a class="active href="kosar.html">kosar</a>
+        </div>
+        <div class="content">
+            <button onclick="kosarba('termek1')" style="width: 75px; height: 40px;">Termék1</button>
+            <button onclick="kosarba('termek2')" style="width: 75px; height: 40px;">Termék2</button>
+            <button onclick="kosarba('termek3')" style="width: 75px; height: 40px;">Termék3</button>
+            <br>
+            <br>
+            <button onclick="torles()">törlés</button>
+            <button onclick="kosar()">kosár</button>
+            <br>
+            <br>
+            <table border="2" id="lista"></table>
+            <script>
+            var termek1 = 10000
+var termek2 = 1500
+var termek3 = 2000
 
-<body style="font-family: 'Neonderthaw', cursive;
-font-family: 'Roboto Mono', monospace;">
-  <style>
-    body {
-      margin: 0;
-      font-family: "Lato", sans-serif;
-    }
 
-    .sidebar {
-      margin: 0;
-      padding: 0;
-      width: 200px;
-      background-color: #f1f1f1;
-      position: fixed;
-      height: 100%;
-      overflow: auto;
-    }
+function kosarba(termek) {
+    db=Number(prompt("Add meg hány darabot szeretnél"))
+    localStorage.setItem(termek,db)
+}
 
-    .sidebar a {
-      display: block;
-      color: black;
-      padding: 16px;
-      text-decoration: none;
-    }
+function torles(){
+    localStorage.clear()
+}
 
-    .sidebar a.active {
-      background-color: #04AA6D;
-      color: blue;
-    }
+function kosar(){
+    var lista = "<tr> <th> név: </th> <th> darab: </th> <th> ár: </th> </tr>"
+    aru = localStorage.key
+    darab = localStorage.getItem(localStorage.key(0))
+    ar = localStorage.key(0)
+    lista += "<tr> <th>" + aru + "</th> <th>" + darab + " </th> <th> " + ar + "FT </th> </tr>"
 
-    .sidebar a:hover:not(.active) {
-      background-color: #555;
-      color: red;
-    }
-
-    div.content {
-      margin-left: 200px;
-      padding: 1px 16px;
-      height: 1000px;
-    }
-
-    @media screen and (max-width: 700px) {
-      .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-      }
-
-      .sidebar a {
-        float: left;
-      }
-
-      div.content {
-        margin-left: 0;
-      }
-    }
-
-    @media screen and (max-width: 400px) {
-      .sidebar a {
-        text-align: center;
-        float: none;
-      }
-    }
-  </style>
-  </head>
-
-  <body>
-
-    <div class="sidebar">
-      <a class="active href=" index.html">kolazs</a>
-      <a href="keplink.html">kep+link</a>
-      <a href="listak.html">listak</a>
-      <a href="orarend.html">orarend</a>
-      <a href="urlap.html">urlap</a>
-      <a href="bejelentkezes.html">bejelentkezés</a>
-      <a href="pitagorasz.html">pitagorasz</a>
-      <a href="szamologep.html">számologép</a>
-      <a href="tablazatweboldalas.html">tablazat</a>
-      <a href="kosar.html">kosar</a>
-    </div>
-    <div class="content">
-                          
-                     
-    <footer>
-      <p style="background-color: brown;text-align:center ;">elérhetöség<br><a href="email:tothcs@kkszki.hu">tothcs@kkszki.hu</a><p>                                                                              
-      </footer>                                                                                              
-    </body>
-</html>
+    document.getElementById('lista').innerHTML = lista
+}
+            </script>       
+        <footer>
+          <p style="background-color: brown;text-align:center ;">elérhetöség<br><a href="email:tothcs@kkszki.hu">tothcs@kkszki.hu</a><p>                                                                              
+          </footer>                                                                                              
+        </body>
+    </html>
